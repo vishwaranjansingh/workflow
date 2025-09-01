@@ -48,6 +48,14 @@ jobs:
       id: plan
       run: terraform plan -no-color -input=false
       continue-on-error: true
+
+  terraform_Apply:
+    runs-on: self-hosted
+    steps:
+    - name: Terraform Apply
+      id: Apply
+      run: terraform apply --auto-approve
+  
     
     
 
