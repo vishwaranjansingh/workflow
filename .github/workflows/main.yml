@@ -2,4 +2,18 @@ name: "test-workflow"
 
 on: workflow_dispatch
 
+env: 
+  ENV_NAME: test-env
+
+jobs: 
+  checkout_job:
+    runs-on: self-hosted
+    steps:  
+    - name: Checkout
+      uses: actions/checkout@v5.0.0
+
+
+           
+    
+
 
