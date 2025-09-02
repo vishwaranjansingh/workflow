@@ -31,6 +31,7 @@ jobs:
       uses: Azure/login@v2.3.0    
       with:
         client-id: 5e766ae6-ac1f-4f5e-a47c-42d6536f2352
+        # client-id: ${{secrets.clientid}}
         tenant-id: d55ca9e2-2a3f-46a9-ba3c-3f6d6eae23ab
         subscription-id: f47677a8-89c6-4bf2-b96b-8bbcdd5fb6d9
         
@@ -54,7 +55,7 @@ jobs:
     steps:
     - name: Terraform Apply
       id: Apply
-      run: terraform apply --auto-approve-input=false
+      run: terraform apply -input=false -auto-approve
   
     
     
